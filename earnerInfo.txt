@@ -1,0 +1,8 @@
+Top earner info
+male,5,11,39.808917197
+Lowest earner info
+female,9,11,0.07655561
+Females in top 10 earners
+2
+College Graduation Minimum Wage Difference
+4.0816223772
