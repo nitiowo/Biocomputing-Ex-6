@@ -28,4 +28,4 @@ lowestWage16=$ cat wages.csv|cut -d, -f 3,4|grep -E "16,"| sort -t, -k2 -n| cut 
 
 
 echo "The difference in minumum wage of doing 16 years vs. 12 years of school is:"
-echo "lowestWage16 - lowestWage12 | bc" #this would be the method used if bc worked on my computer
+echo "lowestWage16 - lowestWage12 | bc" #this would be the method used if bc worked on my computer alongside with variable $s
