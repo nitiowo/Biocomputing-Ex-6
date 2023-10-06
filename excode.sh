@@ -1,5 +1,5 @@
 ##part 1
-sort -k1,1 -k2,2 wages.csv | uniq -d > unique_gender_and_yearsexperience.csv
+cat wages.csv | cut -d ',' -f 1,2 | tail -n +2 | sort -t, -u -k 1,1 -k 2,2n | tr ',' ' ' > unique_gender_and_yearsexperience.csv
 
 ##part2
 echo "Highest Earner:"
