@@ -1,0 +1,21 @@
+#Question 1
+cat wages.csv | cut -d',' -f1,2 | sort -t',' -k1,1 -2,2 | uniq > gender_yearsExperience.txt 
+
+#Question 2
+
+#Part 1
+highest_earner=$(cat wages.csv | cut -d',' -f1,2,4 | tail -n +2 | sort -t',' -k4nr | head -n1)
+echo "Highest Earner: $highest_earner"
+
+#Part 2
+lowest_earner=$(cat wages.csv | cut -d',' -f1,2,4 | tail -n +2 | sort -t',' -k4n | head -n1)
+echo "Lowest Earner: $lowest_earner"
+
+#Part 3
+top_ten_females=$(cat wages.csv | cut -d',' -f1,4 | grep 'female' | cut -d',' -f2 | sort -n -r | head -n10 | grep -c "")
+echo "Number of Females in Top Ten Earners: $top_ten_females"
+
+#Question 3
+val1=$(cat wages.csv | cut-d',' -f3,4 | grep '12' | cut -d',' -f2 | sort -n | head -n1)
+val2=$(cat wages.csv | cut-d',' -f3,4 | grep '16' | cut -d',' -f2 | sort -n | head -n1)
+difference=$(echo "$val1 - $val2" | bc)
